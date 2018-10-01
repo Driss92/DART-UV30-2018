@@ -1,0 +1,23 @@
+import time
+heading = 0.0
+sonar_front = 0.2
+sonar_left = 0.0
+sonar_right = 0.0
+sonar_rear = 0.0
+sonar_front_left = 0.0
+sonar_front_right = 0.0
+odo_front_left = 0
+odo_front_right = 0
+odo_rear_left = 0
+odo_rear_right = 0
+voltage = 6.5
+trig_left = False
+trig_time_left = time.time()
+trig_right = False
+reset_trig_left = 0
+reset_trig_right = 0
+trig_time_right = time.time()
+motor_direction_right = 1
+motor_direction_left = 1
+imu9_config_mg = 0
+imu9_config_ag = 0
