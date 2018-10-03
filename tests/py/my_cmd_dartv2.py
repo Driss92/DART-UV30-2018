@@ -27,8 +27,8 @@ class MyCmdDartV2():
     def distance(self,nom):
         return self.drt.sonars.get_distance(nom)
 
-    def odos(self):
-        return self.drt.encoders.read_encoders()
+    #def odos(self):
+    #    return self.drt.encoders.read_encoders()
 
     def stop(self):
         self.drt.stop()
@@ -41,8 +41,8 @@ if __name__ == "__main__":
     v = my_drt.battery_level ()
     print ("Battery level %5.2f V "%(v))
 
-    print (my_drt.distance("front"),my_drt.distance("right"))
-    print (my_drt.odos())
+    print (my_drt.distance("rear"),my_drt.distance("right"))
+    #print (my_drt.odos())
 
     # stop the robot
     my_drt.stop()
