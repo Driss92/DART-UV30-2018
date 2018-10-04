@@ -41,8 +41,10 @@ if __name__ == "__main__":
     v = my_drt.battery_level ()
     print ("Battery level %5.2f V "%(v))
 
-    print (my_drt.distance("rear"),my_drt.distance("right"))
-    #print (my_drt.odos())
+    print (my_drt.distance("front"),my_drt.distance("right"))
+    print (my_drt.distance("left"),my_drt.distance("right"))
+    print (my_drt.distance("front_left"),my_drt.distance("front_right"))
+   #print (my_drt.odos())
 
     # stop the robot
     my_drt.stop()
