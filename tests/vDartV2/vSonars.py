@@ -128,6 +128,15 @@ class SonarsIO():
         #self.bus.write_i2c_block_data(self.addr,0,cmd)
         self.__dev_i2c_4_sonars.write(0,cmd)
         
+    def get_all_distances(self):
+        vd = self.read_diag_all()
+        vf, vl, vb, vr = self.read_4_sonars()
+        vf = float(vf)/100.0
+        vl = float(vl)/100.0
+        vb = float(vb)/100.0
+        vr = float(vr)/100.0
+        return vf, vl, vb, vr, vd[0], vd[1]
+        
     def get_distance(self, sonar_key):
         """
         Return distance measured "sonar_key" sonar in meters

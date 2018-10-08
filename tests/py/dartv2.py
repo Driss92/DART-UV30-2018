@@ -376,8 +376,8 @@ class DartV2():
                 data = conn.recv(RECV_BUFFER)
                 #print (len(data))
                 hd0,hd1,sz,lft,simulationTime,vSonarFront, vSonarRear,vSonarLeft, vSonarRight, vEncoderFrontLeft, vEncoderFrontRight, vHeading,vSonarFrontLeft,vSonarFrontRight, vEncoderRearLeft, vEncoderRearRight,vXRob,vYRob,vZRob,vXAcc,vYAcc,vZAcc,vXGyro,vYGyro,vZGyro = struct.unpack('<ccHHfffffffffffffffffffff',data)
-                print ("Encoders",vEncoderFrontLeft, vEncoderFrontRight, vEncoderRearLeft, vEncoderRearRight)
-                print ("Sonars",vSonarFront, vSonarRear,vSonarLeft, vSonarRight,vSonarFrontLeft,vSonarFrontRight)
+                #print ("Encoders",vEncoderFrontLeft, vEncoderFrontRight, vEncoderRearLeft, vEncoderRearRight)
+                #print ("Sonars",vSonarFront, vSonarRear,vSonarLeft, vSonarRight,vSonarFrontLeft,vSonarFrontRight)
                 vVoltage = 6.4 - cnt*0.0002
                 cnt+=1
                 vMotorDirectionLeft = 1  # 1: forwards, 0: backwards
